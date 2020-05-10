@@ -50,8 +50,6 @@ resource "aws_security_group" "this" {
 
   }
 
-  #tags = {
-  #  Name = "allow_tls"
-  #}
+  tags = local.merged_tags
   
 }
