@@ -13,7 +13,7 @@
 #                                 | |    
 #                                 |_|    
 
-resource "aws_security_group" "allow_tls" {
+resource "aws_security_group" "this" {
   
   name        = local.name
   description = var.description
