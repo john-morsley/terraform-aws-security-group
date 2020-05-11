@@ -10,7 +10,7 @@ locals {
   name = "${var.name}-sg"
 
   merged_tags = merge(
-    { Name = "${var.name}-sg" },
+    { Name = local.name },
     var.tags
   )
   
