@@ -17,6 +17,11 @@ variable "region" {
   default = "eu-west-2" # London
 }
 
+variable "name" {
+  type = string
+  default = "simple-example"
+}
+
 variable "cidr_block" {
   type = string
   default = "10.0.0.0/16" # 65,531 (65,536 possible - 5 reserved by AWS) 

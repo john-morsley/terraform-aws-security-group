@@ -14,16 +14,16 @@ module "rke-ec2" {
   ami = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
 
-  vpc_id = module.rke-vpc.vpc_id
+  vpc_id = module.rke-vpc.id
 
-  #iam_instance_profile_name = module.iam.instance_profile_name
-
-  public_subnet_id = module.rke-vpc.public_subnet_id
+  public_subnet_id = module.rke-vpc.public_subnet_ids[0]
 
   security_group_ids = [ module.rke-security-group.id ]
 
-  tags = {
-    
-  }
+  availability_zone = data.aws_availability_zones.available.names[0]
+
+  bucket_name = local.name
+  
+  tags = local.cluster_id_tag  
   
 }

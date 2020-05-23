@@ -21,7 +21,7 @@ module "rke-security-group" {
   name = "rke"
   description = "To allow web traffic."
 
-  vpc_id = module.rke-vpc.vpc_id
+  vpc_id = module.rke-vpc.id
 
   ingress = [
     {
@@ -47,9 +47,6 @@ module "rke-security-group" {
     protocol    = "-1"
     cidr_blocks = [ var.all_cidr_block ]
   }]
-  
-  tags = {
-    "${local.cluster_id}" = "owned"
-  }
-  
+
+  tags = local.cluster_id_tag  
 }

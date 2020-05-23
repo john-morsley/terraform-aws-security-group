@@ -1,4 +1,4 @@
-﻿#      _                     _     
+#      _                     _     
 #     | |                   | |    
 #     | |     ___   ___ __ _| |___ 
 #     | |    / _ \ / __/ _` | / __|
@@ -6,7 +6,7 @@
 #     |______\___/ \___\__,_|_|___/
 
 locals {
-
-  cluster_id = "kubernetes.io/cluster/${var.cluster_name}"
-
+  
+  name = "${var.name}-${random_pet.this.id}"
+  
 }

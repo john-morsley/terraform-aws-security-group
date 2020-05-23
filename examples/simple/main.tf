@@ -18,10 +18,10 @@ module "simple-security-group" {
   source = "./../../../terraform-aws-security-group"
   #source = "john-morsley/terraform-aws-security-group"
 
-  name = "simple"
+  name = local.name
   description = "To allow web traffic."
 
-  vpc_id = module.simple-vpc.vpc_id
+  vpc_id = module.simple-vpc.id
 
   ingress = [
     {

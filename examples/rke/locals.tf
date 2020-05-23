@@ -7,11 +7,12 @@
 
 locals {
 
-  name = "${var.name}-sg"
+  name = "${var.name}-${random_pet.this.id}"
+  
+  cluster_id = "kubernetes.io/cluster/${var.cluster_name}"
 
-  merged_tags = merge(
-    { Name = local.name },
-    var.tags
-  )
+  cluster_id_tag = {
+    "${local.cluster_id}" = "owned"
+  }
   
 }
