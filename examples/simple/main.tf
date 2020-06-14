@@ -16,7 +16,7 @@
 module "simple-security-group" {
 
   source = "./../../../terraform-aws-security-group"
-  #source = "john-morsley/terraform-aws-security-group"
+  #source = "john-morsley/security-group/aws"
 
   name = local.name
   description = "To allow web traffic."

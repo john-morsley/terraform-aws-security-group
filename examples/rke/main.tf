@@ -16,7 +16,7 @@
 module "rke-security-group" {
 
   source = "./../../../terraform-aws-security-group"
-  #source = "john-morsley/terraform-aws-security-group"
+  #source = "john-morsley/security-group/aws"
 
   name = "rke"
   description = "To allow web traffic."

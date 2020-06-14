@@ -8,11 +8,12 @@
 module "rke-ec2" {
 
   source = "./../../../terraform-aws-ec2"
+  #source = "john-morsley/ec2/aws"
 
-  name = "rke"
+  name = var.ec2_name
 
   ami = data.aws_ami.ubuntu.id
-  instance_type = "t2.micro"
+  instance_type = var.ec2_instance_type
 
   vpc_id = module.rke-vpc.id
 

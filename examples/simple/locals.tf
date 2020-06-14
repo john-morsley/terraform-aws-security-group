@@ -7,6 +7,6 @@
 
 locals {
   
-  name = "${var.name}-${random_pet.this.id}"
+  name = "${var.ec2_name}-${random_pet.this.id}"
   
 }
