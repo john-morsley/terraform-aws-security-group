@@ -7,13 +7,13 @@
 
 # VPC
 
-vpc_name = "rke-example"
-vpc_cidr_block = "10.0.0.0/16" # 65,531 (65,536 possible - 5 reserved by AWS) 
-public_subnet_cidrs = [ "10.0.0.0/24" ] # 251 (256 possible - 5 reserved by AWS) 
+vpc_name            = "rke-example"
+vpc_cidr_block      = "10.0.0.0/16"   # 65,531 (65,536 possible - 5 reserved by AWS) 
+public_subnet_cidrs = ["10.0.0.0/24"] # 251 (256 possible - 5 reserved by AWS) 
 
 # EC2
 
-ec2_name = "rke-example"
+name = "rke-example"
 
 # Cluster
 

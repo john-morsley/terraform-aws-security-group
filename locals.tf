@@ -13,5 +13,5 @@ locals {
     { Name = local.name },
     var.tags
   )
-  
+
 }

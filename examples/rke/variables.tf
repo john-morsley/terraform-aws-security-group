@@ -20,19 +20,14 @@ variable "public_subnet_cidrs" {
 }
 
 variable "all_cidr_block" {
-  type = string
+  type    = string
   default = "0.0.0.0/0" # All possible IP address range 
 }
 
-# EC2
+# Security Group
 
-variable "ec2_name" {
+variable "name" {
   type = string
-}
-
-variable "ec2_instance_type" {
-  type    = string
-  default = "t2.micro"
 }
 
 # Cluster

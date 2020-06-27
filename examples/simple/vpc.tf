@@ -12,10 +12,10 @@ module "simple-vpc" {
 
   name = var.vpc_name
 
-  vpc_cidr = var.vpc_cidr_block
+  vpc_cidr = var.vpc_cidr
 
   public_subnet_cidrs = var.public_subnet_cidrs
 
-  availability_zones = [ data.aws_availability_zones.available.names[0] ]
+  availability_zones = [data.aws_availability_zones.available.names[0]]
 
 }

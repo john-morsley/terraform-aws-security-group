@@ -11,7 +11,7 @@ variable "vpc_name" {
   type = string
 }
 
-variable "vpc_cidr_block" {
+variable "vpc_cidr" {
   type = string
 }
 
@@ -19,18 +19,8 @@ variable "public_subnet_cidrs" {
   type = list(string)
 }
 
-variable "all_cidr_block" {
-  type    = string
-  default = "0.0.0.0/0" # All possible IP address range 
-}
+# Security Group
 
-# EC2
-
-variable "ec2_name" {
+variable "name" {
   type = string
-}
-
-variable "ec2_instance_type" {
-  type    = string
-  default = "t2.micro"
 }
