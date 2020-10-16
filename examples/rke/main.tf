@@ -24,4 +24,5 @@ module "rke-security-group" {
   vpc_id = module.rke-vpc.id
   
   tags = local.cluster_id_tag
+  
 }

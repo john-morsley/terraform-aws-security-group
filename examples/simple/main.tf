@@ -22,5 +22,5 @@ module "simple-security-group" {
   description = "To allow web traffic."
 
   vpc_id = module.simple-vpc.id
-  
+
 }
