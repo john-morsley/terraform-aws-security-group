@@ -15,7 +15,7 @@
 
 module "simple-security-group" {
 
-  source = "./../../../terraform-aws-security-group"
+  source = "./../../../terraform-aws-security-group-module"
   #source = "john-morsley/security-group/aws"
 
   name        = local.name
